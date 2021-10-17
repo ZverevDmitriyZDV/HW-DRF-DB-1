@@ -9,11 +9,17 @@
         </div>
 
         <div class="sort-block">
-            {# Здесь должен быть раздел с сортировкой #}
+            Cортировать по: |
+            <a href="/catalog?sort=new"> Новизне</a> |
+            <a href="/catalog?sort=cheap"> Сначала дешевые </a> |
+            <a href="/catalog?sort=expensive"> Сначала дорогие </a> |
         </div>
 
         <div class="content">
             {# Здесь должен отображаться каталог с телефонами #}
+            {% for lin in all_data %}
+                <tr class="table-row">{% include "product.html" %}</tr>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

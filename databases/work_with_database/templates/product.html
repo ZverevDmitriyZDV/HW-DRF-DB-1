@@ -5,7 +5,12 @@
 {% block content %}
     <div class="container">
         <div class="header">
-            <h1>Телефон</h1>
+            <h1><a href="/catalog/{{lin.slug}}"> {{lin.name}}</a></h1>
+            <br />
+            <h4><b>Стоимость {{lin.price}} руб</b></h4>
+            <br />
+            <img src={{lin.image}} alt={{lin.slug}} />
+
         </div>
         <div class="content">
 
